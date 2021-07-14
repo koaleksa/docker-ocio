@@ -3,14 +3,14 @@ This project defines a [Docker](https://www.docker.com) image that contains [Ope
 
 # Installation
 ```
-$ docker pull ayoburgess/ocio
+$ docker pull koaleksa/ocio
 ```
 
 # Usage
 ## Using python bindings to compile an OCIO config
 ```
 $ git clone https://github.com/ayoburgess/cgi_aces_ocio.git
-$ docker run --rm -it -v ${PWD}:/mnt/${PWD} ayoburgess/ocio python /mnt/${PWD}/cgi_aces_ocio/make.py
+$ docker run --rm -it -v ${PWD}:/mnt/${PWD} koaleksa/ocio python /mnt/${PWD}/cgi_aces_ocio/make.py
 
 Wrote config_acescg.ocio successfully
 Wrote config_linear_srgb.ocio successfully
@@ -18,7 +18,7 @@ Wrote config_linear_srgb.ocio successfully
 
 ## Verify one of the newly generated configs with ociocheck
 ```
-$ docker run --rm -it -v ${PWD}:/mnt/${PWD} ayoburgess/ocio ociocheck --iconfig /mnt/${PWD}/cgi_aces_ocio/config_acescg.ocio
+$ docker run --rm -it -v ${PWD}:/mnt/${PWD} koaleksa/ocio ociocheck --iconfig /mnt/${PWD}/cgi_aces_ocio/config_acescg.ocio
 
 OpenColorIO Library Version: 1.1.0
 OpenColorIO Library VersionHex: 16842752
